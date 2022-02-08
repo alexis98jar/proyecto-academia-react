@@ -1,0 +1,39 @@
+img {
+    width: 10%;
+}
+
+@media (max-width: 992px) {
+    img {
+        width: 15%;
+    }
+}
+
+@media (max-width: 768px) {
+    img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+body {
+    background: rgb(65,65,71);
+    background: linear-gradient(90deg, rgba(65,65,71,1) 0%, rgba(132,132,149,1) 50%, rgba(65,65,71,1) 100%);
+    color: white;
+}
+
+.numbers {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+   
+}
+
+.price {
+    font-size: 12px;
+}
