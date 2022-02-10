@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { 
     BrowserRouter as Router,
@@ -7,27 +7,53 @@ import {
     Redirect
     } from 'react-router-dom';
 
-import { Provider } from 'react-redux';
+import { Provider, useDispatch, useSelector } from 'react-redux';
 import { LoginScreen } from '../components/auth/LoginScreen';
 import { CryptoMarket } from '../components/cryptos/CryptoMarket';
 import { store } from '../store/store';
 import { RegisterScreen } from '../components/auth/RegisterScreen';
+import { startChecking } from '../actions/auth';
+import { PublicRoute } from './PublicRoute';
+import { PrivateRoute } from './PrivateRoute';
 
 
 export const AppRouter = () => {
+
+    const dispatch = useDispatch();
+
+    const {checking, uid} = useSelector( state => state.auth );
+
+    useEffect(() => {
+        dispatch(startChecking());
+    }, [dispatch]);
+
     return (
-        <Provider store={ store }>
+       
             <Router>
-                <div className="container">
+
                     <Switch>
-                        <Route exact path="/login" component={LoginScreen} />
-                        <Route exact path="/" component={CryptoMarket} />
-                        <Route exact path="/register" component={RegisterScreen} />
+                        <PublicRoute 
+                            exact 
+                            path="/login" 
+                            component={LoginScreen} 
+                            isAuthenticated= {!!uid}    
+                        />
+                        <PublicRoute 
+                            exact 
+                            path="/register" 
+                            component={RegisterScreen} 
+                            isAuthenticated={!!uid}    
+                        />
+                        <PrivateRoute 
+                            exact 
+                            path="/" 
+                            component={CryptoMarket} 
+                            isAuthenticated={!!uid}
+                        />
 
                         <Redirect to="/" />
                     </Switch>
-                </div>
             </Router>
-        </Provider>
+
     );
 }

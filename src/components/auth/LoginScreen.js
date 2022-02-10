@@ -45,6 +45,7 @@ export const LoginScreen = () => {
                             name='lEmail'
                             value={lEmail}
                             onChange={handleLoginInputChange}
+                            autoComplete='off'
                         />
                         <label className="form-label" htmlFor="typeEmailX">Email</label>
                     </div>

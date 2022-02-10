@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Navbar } from '../ui/Navbar';
 import { TableCryptos } from './TableCryptos';
 
 
@@ -29,18 +30,23 @@ export const CryptoMarket = () => {
 
 
     return (
-    <div className='row'>
-        <h2 className='text-center'>Mercado de Cryptomonedas</h2>
-        <input 
-            type='text' 
-            placeholder='🔎Search' 
-            className='form-control bg-dark text-light text-center' 
-            onChange={handleSearch}
-        />
-        <TableCryptos 
-            coins={coins}
-            search={search} 
-        />
-    </div>
+        <>
+            <Navbar />
+            <div className="container">
+                <div className='row'>
+                    <h2 className='text-center'>Mercado de Criptomonedas</h2>
+                    <input 
+                        type='text' 
+                        placeholder='🔎Search' 
+                        className='form-control bg-dark text-light text-center' 
+                        onChange={handleSearch}
+                    />
+                    <TableCryptos 
+                        coins={coins}
+                        search={search} 
+                    />
+                </div>
+            </div>
+        </>
     );
 };
