@@ -15,6 +15,9 @@ import { RegisterScreen } from '../components/auth/RegisterScreen';
 import { startChecking } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
+import { Pokeapi } from '../components/pokemon/Pokeapi';
+import { HomeScreen } from '../components/HomeScreen';
+import { DashboarRoutes } from './DashboarRoutes';
 
 
 export const AppRouter = () => {
@@ -45,9 +48,8 @@ export const AppRouter = () => {
                             isAuthenticated={!!uid}    
                         />
                         <PrivateRoute 
-                            exact 
                             path="/" 
-                            component={CryptoMarket} 
+                            component={DashboarRoutes} 
                             isAuthenticated={!!uid}
                         />
 

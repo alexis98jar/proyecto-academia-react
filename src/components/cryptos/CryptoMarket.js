@@ -31,7 +31,7 @@ export const CryptoMarket = () => {
 
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="container">
                 <div className='row'>
                     <h2 className='text-center'>Mercado de Criptomonedas</h2>

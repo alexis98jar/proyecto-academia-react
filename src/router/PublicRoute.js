@@ -10,11 +10,13 @@ export const PublicRoute = ({
     ...rest
 }) => {
 
+    const path = localStorage.getItem('lastPath');
+    console.log(path)
     return (
         <Route { ...rest }
             component={ (props) => (
                 ( isAuthenticated )
-                    ? ( <Redirect to="/" /> )
+                    ? ( <Redirect to={path} /> )
                     : ( <Component { ...props } /> ) 
             )}
         
