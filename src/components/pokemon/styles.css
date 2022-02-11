@@ -21,7 +21,7 @@
 }
 
 .divTableCell, .divTableHead {
-    border: 1px solid #000000;
+    border: 1px solid #99aaab;
     display: table-cell;
     padding: 3px 10px;
 
@@ -41,22 +41,189 @@
     background-color: gainsboro;
 }
 
-.container{
+.contenedor{
     display: flex;
     opacity: .9;
-    background-color: #99aaab;
     justify-content: center;
+    background-color: rgb(180, 43, 43);
+    border-radius: 2rem;
+    margin: 0 50px;
 }
 
-img {
-    height: 16rem;
+.imgp {
+    height: 15rem;
+    width: 15rem;
 }
 
-input {
+.inputp {
     box-sizing: border-box;
     font-size: 2rem;
     padding: 1rem;
     display: block;
     margin: 2rem auto;
+    height: 3.5rem;
+    width: 22rem;
+    text-align: center;
+    border-radius: 8px;
 }
 
+.bg-ice {
+    background-color: rgba(0, 225, 255, 0.37);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-electric {
+    background-color: rgba(255, 238, 0, 0.452);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-grass {
+    background-color: rgba(6, 100, 42, 0.87);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-steel {
+    background-color: rgba(83, 87, 85, 0.3);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-water {
+    background-color: rgba(9, 5, 235, 0.3);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-fight {
+    background-color: rgba(128, 3, 3, 0.938);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-flying {
+    background-color: rgba(138, 1, 250, 0.3);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-bug {
+    background-color: rgba(144, 170, 29, 0.719);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-normal {
+    background-color: rgba(163, 121, 7, 0.719);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-rock {
+    background-color: rgba(121, 84, 5, 0.719);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-fire {
+    background-color: rgba(252, 113, 0, 0.932);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-fairy {
+    background-color: rgb(236, 100, 191);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-psychic {
+    background-color: rgba(226, 1, 177, 0.973);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-dragon {
+    background-color: rgba(132, 1, 219, 0.973);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-ghost {
+    background-color: rgba(48, 3, 100, 0.973);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+.bg-darkk {
+    background-color: rgba(25, 17, 34, 0.973);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+.bg-ground {
+    background-color: rgba(128, 109, 6, 0.973);
+    display: flex;
+    opacity: .9;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 0 50px;
+}
+
+@media (max-width: 576px) {
+    .bg-water, .bg-ice, .bg-electric, .bg-grass, .bg-steel, .bg-fight, .bg-flying,
+    .bg-bug, .bg-normal, .bg-rock, .bg-fire, .bg-fairy, .bg-psychic, .bg-dragon,
+    .bg-ghost, .bg-darkk, .bg-ground {
+        flex-direction: column;
+        align-items: center;
+    }
+}

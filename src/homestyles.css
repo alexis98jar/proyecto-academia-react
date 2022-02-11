@@ -1,0 +1,42 @@
+.image {
+    width: 15rem;
+    height: 15rem;
+    margin-top: 8px;
+}
+
+.imagec {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 120px;
+    margin-top: 10px;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    margin: 0 50px;
+    color: white;
+}
+
+.tarjetaP {
+    margin: 10px;
+    background-color: rgb(243, 74, 88);
+    border-radius: 10px;
+}
+
+.tarjetaC {
+    margin: 10px;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 576px) {
+    .tarjetas{
+        flex-direction: column;
+        align-items: center;
+    }
+    .imagec{
+        margin-top: 2rem;
+    }
+}

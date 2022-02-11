@@ -1,7 +1,10 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { startLogin } from '../../actions/auth';
 import { useForm } from '../../hooks/useForm';
+import { Footer } from '../ui/Footer';
+import { Header } from '../ui/Header';
 
 export const LoginScreen = () => {
 
@@ -23,18 +26,20 @@ export const LoginScreen = () => {
         console.log('click');
     }
     return(
-        <section className="vh-100 gradient-custom">
-        <div className="container py-5 h-100">
+        <>
+        <Header />
+        <section className="gradient-custom">
+        <div className="container py-2 h-100">
             <form onSubmit={ handleLogin}>
-            <div className="row d-flex justify-content-center align-items-center h-100">
+            <div className="d-flex justify-content-center">
             <div className="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div className="card bg-dark text-white">
-                <div className="card-body p-5 text-center">
+                <div className="card-body p-4 text-center">
 
-                    <div className="mb-md-5 mt-md-4 pb-5">
+                    <div className="mt-md-4 pb-5">
 
                     <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
-                    <p className="text-white-50 mb-5">Please enter your login and password!</p>
+                    <p className="text-white-50 mb-5">Please enter your email and password!</p>
 
                     <div className="form-outline form-white mb-4">
                         <input 
@@ -46,7 +51,7 @@ export const LoginScreen = () => {
                             value={lEmail}
                             onChange={handleLoginInputChange}
                             autoComplete='off'
-                        />
+                            />
                         <label className="form-label" htmlFor="typeEmailX">Email</label>
                     </div>
 
@@ -58,7 +63,7 @@ export const LoginScreen = () => {
                             name='lPassword'
                             value={lPassword}
                             onChange={handleLoginInputChange} 
-                        />
+                            />
                         <label className="form-label" htmlFor="typePasswordX">Password</label>
                     </div>
 
@@ -66,14 +71,9 @@ export const LoginScreen = () => {
 
                     <button className="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
 
-                    <div className="d-flex justify-content-center text-center mt-4 pt-1">
-                        <a onClick={handleClick} href="#!" className="text-white text-decoration-none" ><i className="fab fa-google"></i></a>
                     </div>
-
-                    </div>
-
                     <div>
-                    <p className="mb-0">Don't have an account? <a href="#!" className="text-white-50 fw-bold">Sign Up</a></p>
+                    <p className="mb-0">Don't have an account? <Link className='text-white-50 fw-bold' to='/register'>Sign Up</Link></p>
                     </div>
 
                 </div>
@@ -83,5 +83,7 @@ export const LoginScreen = () => {
             </form>
         </div>
         </section>
+        <Footer />
+        </>
     );
 };

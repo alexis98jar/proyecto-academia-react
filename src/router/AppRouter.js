@@ -9,14 +9,10 @@ import {
 
 import { Provider, useDispatch, useSelector } from 'react-redux';
 import { LoginScreen } from '../components/auth/LoginScreen';
-import { CryptoMarket } from '../components/cryptos/CryptoMarket';
-import { store } from '../store/store';
 import { RegisterScreen } from '../components/auth/RegisterScreen';
 import { startChecking } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
-import { Pokeapi } from '../components/pokemon/Pokeapi';
-import { HomeScreen } from '../components/HomeScreen';
 import { DashboarRoutes } from './DashboarRoutes';
 
 
@@ -31,9 +27,7 @@ export const AppRouter = () => {
     }, [dispatch]);
 
     return (
-       
             <Router>
-
                     <Switch>
                         <PublicRoute 
                             exact 

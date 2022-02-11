@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 export const LastTry = () => {
@@ -41,6 +42,12 @@ export const LastTry = () => {
     }
 
     return (
+        <>
+        <Link to="/home">
+              <button className='btn btn-outline-danger ms-4'>
+                  Back
+              </button>
+          </Link>
         <div className='App'>
             LastTry
 
@@ -50,57 +57,53 @@ export const LastTry = () => {
                         type='text'
                         onChange={handleChange}
                         placeholder="Search a pokemon"
-                    />
+                        className='inputp'
+                        />
                 </label>
             </form>
-            {/* {
-                pokemonData.map((info) => {
-                    return(
-                        <div className='card mt-3 '>
-                            <div>
-
-                            <img src={info.sprites["front_default"]} alt='img pokemon'
-                                className='card-img-top' 
-                            />
-                            </div>
-                            <div className='card-body'>
-                                <h5 className='card-title'>Card title</h5>
-                                <p className='card-text'>Texto aqui</p>
-                            </div>
-                            <ul className='list-group list-group-flush'>
-                                <li className='list-group-item'>item 1</li>
-                                <li className='list-group-item'>item 2</li>
-                                <li className='list-group-item'>item 3</li>
-                            </ul>
-                            <div className='card-body'>
-                                <a className='card-link'>Link +</a>
-
-                            </div>
-                        </div>
-                    )
-                })
-            } */}
-            {/* <div className='card mt-3'>
-                <img src={data.sprites["front_default"]} alt='img pokemon' />
-                <div className='card-body'>
-                    <h5 className='card-title'>Card title</h5>
-                    <p className='card-text'>Texto aqui</p>
-                </div>
-                <ul className='list-group list-group-flush'>
-                    <li className='list-group-item'>item 1</li>
-                    <li className='list-group-item'>item 2</li>
-                    <li className='list-group-item'>item 3</li>
-                </ul>
-                <div className='card-body'>
-                    <a className='card-link'>Link +</a>
-
-                </div>
-            </div> */}
             {
                 pokemonData.map((data) => {
                     return(
-                        <div className='container'>
-                            <img src={data.sprites["front_default"]} />
+                        <div key={data.id} className={
+                            (type === 'ice')
+                            ? 'contenedor bg-ice'
+                            : (type === 'electric')
+                            ? 'contenedor bg-electric'
+                            : (type === 'grass')
+                            ? 'contenedor bg-grass'
+                            : (type === 'steel')
+                            ? 'contenedor bg-steel'
+                            : (type === 'water')
+                            ? 'contenedor bg-water'
+                            : (type === 'fight')
+                            ? 'contenedor bg-fight'
+                            : (type === 'flying')
+                            ? 'contenedor bg-flying'
+                            : (type === 'bug')
+                            ? 'contenedor bg-bug'
+                            : (type === 'normal')
+                            ? 'contenedor bg-normal'
+                            : (type === 'rock')
+                            ? 'contenedor bg-rock'
+                            : (type === 'fire')
+                            ? 'contenedor bg-fire'
+                            : (type === 'fairy')
+                            ? 'contenedor bg-fairy'
+                            : (type === 'psychic')
+                            ? 'contenedor bg-psychic'
+                            : (type === 'pison')
+                            ? 'contenedor bg-poison'
+                            : (type === 'dragon')
+                            ? 'contenedor bg-dragon'
+                            : (type === 'ghost')
+                            ? 'contenedor bg-ghost'
+                            : (type === 'dark')
+                            ? 'contenedor bg-darkk'
+                            : (type === 'ground')
+                            ? 'contenedor bg-ground'
+                            : 'contendor'
+                        }>
+                            <img className='imgp' src={data.sprites["front_default"]} />
                             <div className='divTable'>
                                 <div className='divTableBody'>
                                 <div className='divTableRow'>
@@ -132,5 +135,6 @@ export const LastTry = () => {
                 })
             }
         </div>
+    </>
     )
 }

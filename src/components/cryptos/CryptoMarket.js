@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Navbar } from '../ui/Navbar';
 import { TableCryptos } from './TableCryptos';
 
@@ -31,6 +32,11 @@ export const CryptoMarket = () => {
 
     return (
         <>
+            <Link to="/home">
+              <button className='btn btn-outline-danger ms-4'>
+                  Back
+              </button>
+            </Link>
             {/* <Navbar /> */}
             <div className="container">
                 <div className='row'>

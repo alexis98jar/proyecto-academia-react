@@ -23,9 +23,10 @@ img {
 }
 
 body {
-    background: rgb(65,65,71);
+    /* background: rgb(65,65,71);
     background: linear-gradient(90deg, rgba(65,65,71,1) 0%, rgba(132,132,149,1) 50%, rgba(65,65,71,1) 100%);
-    color: white;
+    color: white; */
+    background-color: #fff;
 }
 
 .numbers {
