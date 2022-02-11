@@ -128,7 +128,16 @@ export const LastTry = () => {
                                         return(data.type.name + "  ")
                                     })}</div>
                                 </div>
+                                <div className=''>
+                                    <div className='d-flex justify-content-center mt-2'>
+                                        <a href={`https://www.pokemon.com/el/pokedex/${data.forms[0].name}`} className='btn btn-primary d-block'>
+                                            More Info
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
+                            </div>
+                            <div>
                             </div>
                         </div>
                     )
